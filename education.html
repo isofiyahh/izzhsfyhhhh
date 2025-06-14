@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animated Gradient Background with Bubbles</title>
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        body {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            /* Animated gradient background */
+            background: linear-gradient(120deg, #f297a0, #b6bb79, #f9d0ce, #eaffd0);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease-in-out infinite;
+        }
+        @keyframes gradientMove {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float 12s linear infinite;
+            pointer-events: none;
+            mix-blend-mode: lighten;
+        }
+        /* Different bubble sizes and speeds */
+        .bubble1 { width: 80px; height: 80px; left: 10%; animation-duration: 14s; background: #ffe4ec; top: 90%; }
+        .bubble2 { width: 60px; height: 60px; left: 30%; animation-duration: 10s; background: #eaffd0; top: 100%; }
+        .bubble3 { width: 100px; height: 100px; left: 50%; animation-duration: 16s; background: #ffe4ec; top: 95%; }
+        .bubble4 { width: 40px; height: 40px; left: 70%; animation-duration: 12s; background: #eaffd0; top: 98%; }
+        .bubble5 { width: 90px; height: 90px; left: 85%; animation-duration: 18s; background: #ffe4ec; top: 92%; }
+        .bubble6 { width: 50px; height: 50px; left: 60%; animation-duration: 11s; background: #eaffd0; top: 97%; }
+        .bubble7 { width: 70px; height: 70px; left: 20%; animation-duration: 13s; background: #ffe4ec; top: 94%; }
+        .bubble8 { width: 65px; height: 65px; left: 40%; animation-duration: 15s; background: #eaffd0; top: 93%; }
+        .bubble9 { width: 55px; height: 55px; left: 75%; animation-duration: 12.5s; background: #ffe4ec; top: 99%; }
+        .bubble10 { width: 85px; height: 85px; left: 55%; animation-duration: 17s; background: #eaffd0; top: 91%; }
+        .bubble11 { width: 45px; height: 45px; left: 25%; animation-duration: 13.5s; background: #ffe4ec; top: 96%; }
+        .bubble12 { width: 60px; height: 60px; left: 65%; animation-duration: 14.5s; background: #eaffd0; top: 95%; }
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.5;
+            }
+            80% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+    <div class="bubble bubble4"></div>
+    <div class="bubble bubble5"></div>
+    <div class="bubble bubble6"></div>
+    <div class="bubble bubble7"></div>
+</body>
+</html>
+
+<section style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2;">
+    <div style="display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center;">
+        <div style="background: rgba(255,255,255,0.85); border-radius: 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); padding: 5rem 2.5rem; min-width: 300px; text-align: center;">
+            <h3 style="color: #7a5c61; margin-top: 0;">Primary School</h3>
+            <strong>Sekolah Kebangsaan Pengkalan Berangan</strong><br>
+            2011 – 2016
+        </div>
+        <div style="background: rgba(255,255,255,0.85); border-radius: 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); padding: 5rem 2.5rem; min-width: 300px; text-align: center;">
+            <h3 style="color: #7a5c61; margin-top: 0;">High School</h3>
+            <strong>Sekolah Menengah Kebangsaan Pengkalan Berangan</strong><br>
+            2017 – 2023
+        </div>
+        <div style="background: rgba(255,255,255,0.85); border-radius: 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); padding: 5rem 2.5rem; min-width: 300px; text-align: center;">
+            <h3 style="color: #7a5c61; margin-top: 0;">University</h3>
+            <strong>Bachelor's Degree</strong><br>
+            University Teknologi Mara Campus Puncak Perdana<br>
+            2024 – Untill now
+        </div>
+    </div>
+</section>
+
+<style>
+    .edu-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 0.5rem;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        display: inline-block;
+    }
+</style>
+<script>
+    // Example logo URLs (replace with your own if needed)
+    const logos = [
+        "c:\\Users\\Admin\\Desktop\\hp backup may 25 pink\\image\\images.jpeg",      // Primary School
+        "c:\\Users\\Admin\\Desktop\\hp backup may 25 pink\\image\\images (1).jpeg", // High School
+        "c:\\Users\\Admin\\Desktop\\hp backup may 25 pink\\image\\logo_uitm1068475464.webp"      // University
+    ];
+    document.addEventListener("DOMContentLoaded", function() {
+        const boxes = document.querySelectorAll('section > div > div');
+        boxes.forEach((box, i) => {
+            const img = document.createElement('img');
+            img.src = logos[i] || logos[0];
+            img.className = "edu-logo";
+            box.insertBefore(img, box.firstChild);
+        });
+    });
+</script></script>

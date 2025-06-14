@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><IML470.html</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color:#b5c99a;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #f9d0ce;
+            box-shadow: 0 4px 10px rgba(24, 24, 24, 0.662);
+        }
+
+        td, th {
+            padding: 15px;
+            border: 1px solid #0b0b0b;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ea7ea3;
+            color: black;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-button {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Me</h1>
+
+    <!-- Contact Info Table -->
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Nur Izzah Sofiyah Binti Zakaria</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>izzahsofiyah659@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>+60 1131540215</td>
+        </tr>
+    </table>
+
+    <h2>Send Me a Message</h2>
+
+    <!-- Contact Form Table -->
+    <form>
+        <table>
+            <tr>
+                <td>Your Name:</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Your Email:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Your Message:</td>
+                <td><textarea name="message" rows="5" required></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="form-button"><button type="submit">Send</button></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
